@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="ui top attached tabular menu">
+        <a href="/articleList" class="item {{if .isArticle}}active{{end}}">
+            已发文章
+        </a>
+        <a href="/draftList" class="item {{if .isDraft}}active{{end}}">
+            草稿
+        </a>
+        <a href="/trashList" class="item {{if .isTrash}}active{{end}}">
+            回收站
+        </a>
+        <div class="ui right labeled icon button teal small" style="float:right;">
+            <i class="right Write icon"></i>
+            <a style="color: whitesmoke" href="/newArticle">新文章</a>
+        </div>
+    </div>
+    <div class="ui bottom attached segment">
+        <table class="ui table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>标题</th>
+                <th>分类</th>
+                <th>创建时间</th>
+                <th>浏览量</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{range $k,$:=.topics}}
+            <tr>
+                <td>{{$k}}</td>
+                <td>{{.Title}}</td>
+                <td>{{.Category.Name}}</td>
+                <td>{{.Created}}</td>
+                <td>2</td>
+                <td><a href="#">编辑</a>/<a href="#">删除</a></td>
+            </tr>
+            {{end}}
+            </tbody>
+        </table>
+    </div>
+</div>

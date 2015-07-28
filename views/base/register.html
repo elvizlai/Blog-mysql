@@ -1,0 +1,99 @@
+<div class="modal fade" id="popRegister" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">财发现注册</h4>
+            </div>
+            <div class="modal-body">
+                <div class="register">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">手机号码</label>
+
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="phone" placeholder="手机号码"
+                                       data-container="body" data-placement="right
+                                        " data-toggle="popover" data-trigger="manual">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">验证码</label>
+
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" name="phonecode" placeholder="验证码"
+                                       data-container="body" data-placement="right" data-toggle="popover"
+                                       data-trigger="manual">
+                            </div>
+                            <div class="col-sm-4">
+                                <button type="button" id="btnsendcode" onclick="SendPhoneCode(this);"
+                                        class="btn btn-primary btn-lg btn-block">发送验证码
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">登录密码</label>
+
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control" name="registerpwd"
+                                       placeholder="登录密码" data-container="body" data-placement="right"
+                                       data-toggle="popover"
+                                       data-trigger="manual">
+                            </div>
+                            <div class="col-sm-offset-3">
+                                <div class="col-sm-9 margin-top-10">
+                                    <div class="ywz_zhuce_huixian" id='pwdLevel_1'>
+                                    </div>
+                                    <div class="ywz_zhuce_huixian" id='pwdLevel_2'>
+                                    </div>
+                                    <div class="ywz_zhuce_huixian" id='pwdLevel_3'>
+                                    </div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="ywz_zhuce_hongxianwenzi">
+                                        弱
+                                    </div>
+                                    <div class="ywz_zhuce_hongxianwenzi">
+                                        中
+                                    </div>
+                                    <div class="ywz_zhuce_hongxianwenzi">
+                                        强
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">确认密码</label>
+
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control" name="registerpwdnew"
+                                       placeholder="确认密码" data-container="body" data-placement="right"
+                                       data-toggle="popover"
+                                       data-trigger="manual">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-10">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="ischeck" checked>阅读并同意条款<a href="#"
+                                                                                              class="blue">
+                                        《财发现注册协议》</a>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-1 col-sm-12 regist-next">
+                                <button type="button" id="btnregister" class="btn btn-primary btn-lg btn-block">提交
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

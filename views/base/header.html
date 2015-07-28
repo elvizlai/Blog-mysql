@@ -1,0 +1,28 @@
+<div class="ui menu">
+    <div class="header item">
+        <em>ElvizLai's Blog</em>
+    </div>
+    <a class="item {{if .isHome}}active{{end}}" href="/">
+        <i class="icon Home"></i>Home
+    </a>
+    <a class="item {{if .isArchives}}active{{end}}" href="/archives">
+        <i class="icon Calendar"></i>Archives
+    </a>
+    <a class="item {{if .isMe}}active{{end}}" href="/me">
+        <i class="icon Pointing Right"></i>Me
+    </a>
+
+    {{if .isLogin}}
+    <div class="right menu">
+        <div class="circular tiny ui icon button Logout" style="margin-top: 3px"><i class="icon Sign out"></i></div>
+    </div>
+    <div class="right menu">
+        <div class="circular tiny ui icon button ArticleList" style="margin-top: 3px"><i class="icon List Layout"></i></div>
+    </div>
+    {{else}}
+    <div class="right menu">
+        <div class="circular tiny ui icon button Login" style="margin-top: 3px"><i class="icon Sign in"></i></div>
+    </div>
+    {{end}}
+
+</div>

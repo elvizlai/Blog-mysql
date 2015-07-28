@@ -1,0 +1,19 @@
+{{if gt .paginator.PageNums 1}}
+<div class="ui buttons">
+    {{if .paginator.HasPrev}}
+    <div class="ui button"><a href="{{.paginator.PageLinkFirst}}">First</a></div>
+    {{else}}
+    <div class="ui button disabled"><a>First</a></div>
+    {{end}}
+    {{range $index, $page := .paginator.Pages}}
+    <div {{if $.paginator.IsActive .}} class="ui button active" {{else}} class="ui button" {{end}}>
+        <a href="{{$.paginator.PageLink $page}}">{{$page}}</a>
+    </div>
+    {{end}}
+    {{if .paginator.HasNext}}
+    <div class="ui button"><a href="{{.paginator.PageLinkLast}}">End</a></div>
+    {{else}}
+    <div class="ui button disabled"><a>End</a></div>
+    {{end}}
+</div>
+{{end}}

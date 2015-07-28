@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>测试</title>
+    {{template "base/css.html"}}
+    {{template "base/js.html"}}
+</head>
+<body id="sink">
+<div class="main container">
+    <h1>LOGO</h1>
+    <div style="width:auto;height:250px;overflow:hidden;border:0">
+        <div style="width:800px;height:800px;margin:-122px 0 0 -42px;">
+            <iframe src="http://127.0.0.1:9000/article?id=11" width="800" height="1280" scrolling="no"></iframe>
+        </div>
+    </div>
+    ---------------------------------------
+    <div style="width:800px;height:200px;overflow:hidden;border:0">
+        <div style="width:auto;height:200px;margin:-320px 0 0 -10px;">
+            <iframe src="http://www.sci99.com/details/monitorall.aspx" width="700" height="1024" scrolling="no">
+            </iframe>
+        </div>
+    </div>
+    <!--<div class="ui divider"></div>-->
+
+
+    <!--<script id="editor" type="text/plain"></script>-->
+</div>
+
+</body>
+
+<script type="text/javascript">
+    var ue = UE.getEditor("editor");
+    ue.ready(function () {
+        ue.setContent("hello");
+        var content = ue.getContent();
+
+    })
+</script>
+</html>

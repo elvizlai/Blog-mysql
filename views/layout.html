@@ -1,0 +1,13 @@
+<html>
+<head>
+    <title>{{.Title}}</title>
+    <link rel="icon shortcut" href="/static/img/">
+    {{template "base/css.html"}}
+    {{template "base/js.html"}}
+</head>
+<body>
+{{template "base/header.html" .}}
+{{.LayoutContent}}
+{{template "base/footer.html" .}}
+</body>
+</html>

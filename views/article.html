@@ -1,0 +1,18 @@
+{{set . "Title" .article.Title}}
+<div class="container">
+    {{with .article}}
+    <div class="ui raised segment">
+        <h2 class="ui large header">
+            {{.Title}}
+            <div class="sub header" style="font-size: small">{{.User.Nickname}} · {{dateformat .Created "2006-01-02 15:04:05"}} · {{.Views}}次点击</div>
+        </h2>
+        <span></span>
+        {{str2html .Content}}
+        <div class="ui divider"></div>
+        <a class="ui tiny purple tag label">{{.Category.Name}}</a>
+        <div class="ui tiny blue label">
+            <i class="tags icon"></i> <a>Golang</a>,<a>multipart/form-data</a>
+        </div>
+    </div>
+    {{end}}
+</div>

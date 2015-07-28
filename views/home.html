@@ -1,0 +1,23 @@
+{{set . "isHome" true}}
+<div class="ui right grid">
+    <div class="twelve wide column segment">
+        <div class="container">
+            {{range .topicList}}
+            <div class="ui raised segment">
+                <a class="ui teal ribbon label">{{dateformat .Created "2006-01-02"}}</a>
+                <h2 class="title"><a href="/article?id={{.Id}}">{{.Title}}</a></h2>
+                <div id="abstract">
+                    {{str2html .Abstract}}
+                </div>
+                <div class="ui divider"></div>
+                <a class="ui tiny purple tag label">{{.Category.Name}}</a>
+                <div class="ui mini circular positive button alignright"><a href="/article?id={{.Id}}"></a> >Read More</div>
+            </div>
+            {{end}}
+            {{template "base/paginator.html" .}}
+        </div>
+    </div>
+    <div class="four wide column">
+        {{template "base/sidebar.html" .}}
+    </div>
+</div>

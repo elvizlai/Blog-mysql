@@ -1,0 +1,100 @@
+a {
+    color: #444;
+}
+
+a:hover {
+    color: #258fb8;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    background-image: url("/static/img/bg.png");
+}
+
+.container {
+    width: auto;
+    height: auto;
+    min-height: 88%;
+    padding-bottom: 20px;
+    margin-left: 32px;
+    margin-right: 32px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.side.container {
+    position: fixed;
+    min-height: 0;
+    margin-left: -40px;
+}
+
+.main.container {
+    width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.title {
+    margin-top: auto;
+}
+
+.title a {
+    color: #444;
+}
+
+.title a:hover {
+    color: #258fb8;
+}
+
+.alignright {
+    float: right;
+}
+
+.footer {
+    position: relative;
+    text-align: center;
+    padding-bottom: 8px;
+}
+
+.ui.button {
+    margin: .25em 0 0;
+}
+
+pre {
+    position: relative;
+    border-radius: 3px;
+    border: 1px solid #C3CCD0;
+    background: #FFF;
+    overflow: hidden;
+}
+
+code {
+    display: block;
+    padding: 1px 24px;
+    overflow-y: auto;
+    font-family: Menlo, monospace;
+    font-size: 0.9em;
+}
+
+.pre-numbering {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    padding: 1px 1px 1px 0;
+    border-right: 1px solid #C3CCD0;
+    border-radius: 3px 0 0 3px;
+    background-color: #f4f0ee;
+    text-align: right;
+    font-family: Menlo, monospace;
+    font-size: 0.9em;
+    color: #AAA;
+}
+
+.ui.form .field>label.error{
+    color: #d40000;
+}

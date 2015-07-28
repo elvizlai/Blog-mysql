@@ -1,0 +1,110 @@
+<div class="container verifyForm">
+    <form method="post" action="/postArticle">
+        <i class="cloud icon" id="modifyCategory"></i>
+        <select id="categoryId" class="ui dropdown field" name="categoryId">
+            <option value="">分类</option>
+            {{range .categories}}
+            <option value="{{.Id}}">{{.Name}}</option>
+            {{end}}
+            <option value="-1" id="newCategory">NEW!</option>
+        </select>
+        <div class="ui labeled input field" style="width: 40%">
+            <div class="ui label">
+                标题:
+            </div>
+            <input name="articleTitle" type="text" style="width:100%">
+            <div class="ui corner label">
+                <i class="asterisk icon"></i>
+            </div>
+        </div>
+        <div class="ui labeled input field">
+            <div class="ui label">
+                标签:
+            </div>
+            <input name="articleTags" type="text" placeholder="多个标签间用;隔开">
+        </div>
+        <div class="ui teal buttons" style="float: right">
+            <div class="ui button" id="postArticle">操作</div>
+            <div class="ui combo top right pointing dropdown icon button">
+                <i class="dropdown icon"></i>
+
+                <div class="menu">
+                    <div class="item" data-value="1"><i class="Send icon"></i>发布</div>
+                    <div class="item" data-value="2"><i class="Wait icon"></i>草稿</div>
+                </div>
+            </div>
+        </div>
+        <div class="ui divider"></div>
+        <script id="editor" type="text/plain"></script>
+    </form>
+</div>
+<div class="ui small modal" id="newCategoryModel">
+    <div class="header">
+        新建分类
+    </div>
+    <div class="content verifyForm">
+        <form action="/addCategory" method="post">
+            <div class="ui labeled input field" style="width: 100%">
+                <div class="ui label">
+                    分类名称:
+                </div>
+                <input id="newCategoryName" name="categoryName" type="text" style="width: 100%">
+
+                <div class="ui corner label">
+                    <i class="asterisk icon"></i>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <div class="ui negative button">
+            取消
+        </div>
+        <div class="ui positive right labeled icon button">
+            确认
+            <i class="checkmark icon"></i>
+        </div>
+    </div>
+</div>
+<div class="ui small modal" id="modifyCategoryModel">
+    <div class="header">
+        编辑分类
+    </div>
+    <div class="content verifyForm">
+        <form action="/modifyCategory" method="post">
+            <div class="ui labeled input field" style="width: 100%">
+                <div class="ui label">
+                    分类名称:
+                </div>
+                <input id="modifyCategoryName" name="categoryName" type="text" style="width: 100%">
+                <div class="ui corner label">
+                    <i class="asterisk icon"></i>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <div class="ui negative button">
+            取消
+        </div>
+        <div class="ui positive right labeled icon button">
+            确认
+            <i class="checkmark icon"></i>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $('.combo').dropdown('set selected', "1");
+    var ue = UE.getEditor("editor");
+    ue.ready(function () {
+        $('#postArticle').click(function () {
+            if ($(this).text() == "发布") {
+                $(this).parents("form").attr("action", "/postArticle?isDraft=false");
+                $(this).parents("form").submit()
+            } else {
+                $(this).parents("form").attr("action", "/postArticle?isDraft=true");
+                $(this).parents("form").submit()
+            }
+        });
+    })
+</script>

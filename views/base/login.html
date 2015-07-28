@@ -1,0 +1,52 @@
+<div class="modal fade" id="popLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">财发现登陆</h4>
+            </div>
+            <div class="modal-body">
+                <div class="register">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">手机号码</label>
+
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="loginname" placeholder="手机号码"
+                                       data-container="body" data-placement="right" data-toggle="popover"
+                                       data-trigger="manual">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">登录密码</label>
+
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control" name="password"
+                                       placeholder="登录密码" data-container="body" data-placement="right"
+                                       data-toggle="popover"
+                                       data-trigger="manual">
+                            </div>
+                        </div>
+                        <div class="hide">
+                            <label class="col-sm-3 control-label">验证码</label>
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control" name="verifyCode" style="width:160px;"
+                                       placeholder="验证码" data-container="body" data-placement="right"
+                                       data-toggle="popover" data-trigger="manual">
+                                <div id="captchaHolder"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-1 col-sm-12 regist-next">
+                                <button id="btnlogin" class="btn btn-primary btn-lg btn-block" data-loading-text="登录中..."
+                                        style="cursor:pointer;">立即登录
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
